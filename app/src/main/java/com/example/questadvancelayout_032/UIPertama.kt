@@ -53,6 +53,10 @@ fun  ActivitasPertama(modifier: Modifier) {
                 val gambar = painterResource(id = R.drawable.logo_umy)
                 image(
                     painter = gambar,
+                    constentDescription = null,
+                    modifier = Modifier
+                        .size(size = 100.dp)
+                        .
                 )
             }
 
