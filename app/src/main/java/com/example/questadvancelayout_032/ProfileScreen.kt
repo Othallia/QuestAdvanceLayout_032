@@ -123,6 +123,13 @@ fun ProfileScreen() {
                 modifier = Modifier
                     .fillMaxWidth()
                     .padding(horizontal = 32.dp) // Beri jarak kiri-kanan
+            ) {
+                Row(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                )
 
     }
 }
