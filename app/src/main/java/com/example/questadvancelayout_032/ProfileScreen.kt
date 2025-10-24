@@ -54,7 +54,8 @@ fun ProfileScreen() {
         Column(
             modifier = Modifier
                 .fillMaxWidth()
-                .verticalScroll(rememberScrollState()),
+                .verticalScroll(rememberScrollState())
+                .padding(bottom = 80.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
@@ -64,7 +65,7 @@ fun ProfileScreen() {
                 contentDescription = "Foto Profil",
                 contentScale = ContentScale.Crop,
                 modifier = Modifier
-                    .size(120.dp)
+                    .size(180.dp)
                     .clip(CircleShape)
                     .border(2.dp, Color.Gray, CircleShape)
             )
@@ -78,25 +79,40 @@ fun ProfileScreen() {
                 Image(
                     painter = painterResource(id = R.drawable.wa),
                     contentDescription = "WhatsApp",
-                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(45.dp)
+                        .padding(horizontal = 4.dp)
+                        .clip(CircleShape)
                 )
                 Image(
                     painter = painterResource(id = R.drawable.spotify),
                     contentDescription = "Spotify",
-                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(45.dp)
+                        .padding(horizontal = 4.dp)
+                        .clip(CircleShape)
                 )
                 Image(
                     painter = painterResource(id = R.drawable.ig),
                     contentDescription = "Instagram",
-                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(45.dp)
+                        .padding(horizontal = 4.dp)
+                        .clip(CircleShape)
                 )
                 Image(
                     painter = painterResource(id = R.drawable.tiktok),
                     contentDescription = "Tiktok",
-                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(45.dp)
+                        .padding(horizontal = 4.dp)
+                        .clip(CircleShape)
                 )
             }
-
 
             Spacer(modifier = Modifier.height(16.dp))
             Text(
@@ -113,7 +129,7 @@ fun ProfileScreen() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Selamat datang dikumpulan karya dan album dari Hindia.",
+                text = "Selamat datang dikumpulan album dari Hindia.",
                 color = Color.White,
                 fontSize = 16.sp,
                 textAlign = TextAlign.Center
@@ -164,6 +180,7 @@ fun ProfileScreen() {
                     )
                 }
             }
+
             Spacer(modifier = Modifier.height(100.dp))
 
         }
