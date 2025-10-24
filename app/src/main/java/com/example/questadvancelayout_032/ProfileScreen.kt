@@ -15,7 +15,7 @@ import androidx.compose.ui.graphics.Color
 
 
 @Composable
-fun QuestAdvanceLayout_032() {
+fun ProfileScreen() {
     Box(
         modifier = Modifier
             .fillMaxSize()
