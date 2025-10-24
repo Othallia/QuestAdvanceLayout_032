@@ -41,6 +41,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.icons.filled.PlayArrow
 
 
 @Composable
@@ -141,14 +142,12 @@ fun ProfileScreen() {
                 onClick = { /* TODO: Aksi logout */ },
                 shape = RoundedCornerShape(50.dp),
                 colors = ButtonDefaults.buttonColors(
-                    containerColor = Color.Red // Warna merah
+                    containerColor = Color.Red
                 ),
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 32.dp)
             ) {
                 Row(
-                    modifier = Modifier.padding(vertical = 8.dp),
+                    modifier = Modifier.padding(vertical = 8.dp, horizontal = 32.dp),
                     verticalAlignment = Alignment.CenterVertically
                 ) {
                     Icon(
@@ -218,10 +217,10 @@ fun MenuButton(text: String, imageResId: Int) {
                 modifier = Modifier.weight(1f)
             )
             Icon(
-                imageVector = Icons.Default.Circle,
-                contentDescription = null,
-                tint = Color.Gray,
-                modifier = Modifier.size(8.dp)
+                imageVector = Icons.Default.PlayArrow,
+                contentDescription = "Putar Musik",
+                tint = Color.White,
+                modifier = Modifier.size(20.dp)
             )
         }
     }
