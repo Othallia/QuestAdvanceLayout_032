@@ -1,9 +1,11 @@
 package com.example.questadvancelayout_032
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -15,6 +17,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.layout.ModifierLocalBeyondBoundsLayout
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -23,9 +26,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
-private val Color.Companion.Darkgrey: Color
 
-private fun Modifier.fillMaxWidht(fraction: Float) {}
 
 @Composable
 fun  ActivitasPertama(modifier: Modifier) {
@@ -50,10 +51,10 @@ fun  ActivitasPertama(modifier: Modifier) {
         Card(
             modifier = Modifier
                 .height(height = 160.dp)
-                .fillMaxWidht(fraction = 1f)
+                .fillMaxWidth(fraction = 1f)
                 .padding(all = 12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.Darkgrey
+                containerColor = Color.DarkGray
             )
         ){
             Row(
@@ -61,7 +62,7 @@ fun  ActivitasPertama(modifier: Modifier) {
                 modifier = Modifier.padding(all=10.dp)
             ){
                 val gambar = painterResource(id = R.drawable.logo_umy)
-                image(
+                Image(
                     painter = gambar,
                     constentDescription = null,
                     modifier = Modifier
@@ -84,5 +85,7 @@ fun  ActivitasPertama(modifier: Modifier) {
         }
     }
 }
+
+
 
 
