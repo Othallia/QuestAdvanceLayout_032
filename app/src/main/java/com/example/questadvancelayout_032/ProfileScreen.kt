@@ -112,5 +112,17 @@ fun ProfileScreen() {
                 fontSize = 16.sp
             )
         }
+        @Composable
+        fun MenuButton(text: String, icon: ImageVector) {
+            Button(
+                onClick = { /* TODO: Aksi tombol */ },
+                shape = RoundedCornerShape(50.dp), // Bikin melengkung sempurna
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color(0xFF3E3E3E) // Warna abu-abu tua
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 32.dp) // Beri jarak kiri-kanan
+
     }
 }
