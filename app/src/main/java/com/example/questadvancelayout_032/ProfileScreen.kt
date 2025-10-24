@@ -57,7 +57,16 @@ fun ProfileScreen() {
         ) {
 
         }
-
+        Spacer(modifier = Modifier.height(60.dp))
+        Image(
+            painter = painterResource(id = R.drawable.profile),
+            contentDescription = "Foto Profil",
+            contentScale = ContentScale.Crop,
+            modifier = Modifier
+                .size(120.dp)
+                .clip(CircleShape)
+                .border(2.dp, Color.Gray, CircleShape)
+        )
 
     }
 }
