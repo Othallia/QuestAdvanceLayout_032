@@ -92,6 +92,25 @@ fun ProfileScreen() {
                 contentDescription = "LinkedIn",
                 modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
             )
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Abra Yudhistira", // Ganti dengan namamu
+                color = Color.White,
+                fontSize = 24.sp,
+                fontWeight = FontWeight.Bold
+            )
+            Spacer(modifier = Modifier.height(4.dp))
+            Text(
+                text = "@Hindia",
+                color = Color.Gray,
+                fontSize = 16.sp
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            Text(
+                text = "Album-Album Hindia",
+                color = Color.White,
+                fontSize = 16.sp
+            )
         }
     }
 }
