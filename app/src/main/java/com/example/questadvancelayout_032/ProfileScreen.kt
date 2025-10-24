@@ -129,7 +129,29 @@ fun ProfileScreen() {
                         .fillMaxWidth()
                         .padding(vertical = 8.dp),
                     verticalAlignment = Alignment.CenterVertically
-                )
+                ) {
+                    Icon(
+                        imageVector = icon,
+                        contentDescription = text,
+                        tint = Color.White,
+                        modifier = Modifier.size(20.dp)
+                    )
+                    Spacer(modifier = Modifier.width(16.dp))
+                    Text(
+                        text = text,
+                        color = Color.White,
+                        fontSize = 16.sp,
+                        modifier = Modifier.weight(1f) // Trik agar ikon titik ke dorong ke kanan
+                    )
+                    Icon(
+                        imageVector = Icons.Default.Circle, // Ikon titik
+                        contentDescription = null,
+                        tint = Color.Gray,
+                        modifier = Modifier.size(8.dp)
+                    )
+                }
+            }
+        }
 
     }
 }
