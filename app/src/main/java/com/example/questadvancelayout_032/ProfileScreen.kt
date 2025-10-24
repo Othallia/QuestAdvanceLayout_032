@@ -105,7 +105,7 @@ fun ProfileScreen() {
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(
-                text = "@Hindia",
+                text = "@Wordfangs",
                 color = Color.Gray,
                 fontSize = 16.sp
             )
@@ -119,7 +119,7 @@ fun ProfileScreen() {
 
             Spacer(modifier = Modifier.height(32.dp))
             MenuButton(
-                text = "Matahari Di Balik",
+                text = "Menari Dengan Bayangan",
                 imageResId = R.drawable.mdb
             )
             Spacer(modifier = Modifier.height(16.dp))
@@ -129,7 +129,7 @@ fun ProfileScreen() {
             )
             Spacer(modifier = Modifier.height(16.dp))
             MenuButton(
-                text = "Doves",
+                text = "Doves, '25 on Blank Canvas",
                 imageResId = R.drawable.doves
             )
 
@@ -163,16 +163,16 @@ fun ProfileScreen() {
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(100.dp)) // Jarak ke bawah
+            Spacer(modifier = Modifier.height(100.dp))
 
         }
 
         Text(
-            text = "© 2025 Octaviani Putri", // Ganti namamu
+            text = "© 2025 Octaviani Putri",
             color = Color.Gray,
             fontSize = 12.sp,
             modifier = Modifier
-                .align(Alignment.BottomCenter) // Selalu nempel di bawah
+                .align(Alignment.BottomCenter)
                 .padding(bottom = 24.dp)
         )
 
