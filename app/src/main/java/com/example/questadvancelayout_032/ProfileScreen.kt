@@ -59,7 +59,7 @@ fun ProfileScreen() {
         }
         Spacer(modifier = Modifier.height(60.dp))
         Image(
-            painter = painterResource(id = R.drawable.profile),
+            painter = painterResource(id = R.drawable.baskara),
             contentDescription = "Foto Profil",
             contentScale = ContentScale.Crop,
             modifier = Modifier
@@ -67,6 +67,31 @@ fun ProfileScreen() {
                 .clip(CircleShape)
                 .border(2.dp, Color.Gray, CircleShape)
         )
-
+        Spacer(modifier = Modifier.height(16.dp))
+        Row(
+            horizontalArrangement = Arrangement.Center, // Susun di tengah
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Image(
+                painter = painterResource(id = R.drawable.wa),
+                contentDescription = "Google",
+                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.spotify),
+                contentDescription = "Facebook",
+                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.ig),
+                contentDescription = "Twitter",
+                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+            )
+            Image(
+                painter = painterResource(id = R.drawable.tiktok),
+                contentDescription = "LinkedIn",
+                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+            )
+        }
     }
 }
