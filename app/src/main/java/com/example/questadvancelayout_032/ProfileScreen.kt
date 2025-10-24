@@ -1,6 +1,6 @@
 package com.example.questadvancelayout_032
 
-
+// (SEMUA IMPORT BIARKAN SAJA, SUDAH BENAR)
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -56,45 +56,48 @@ fun ProfileScreen() {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
 
-        }
-        Spacer(modifier = Modifier.height(60.dp))
-        Image(
-            painter = painterResource(id = R.drawable.baskara),
-            contentDescription = "Foto Profil",
-            contentScale = ContentScale.Crop,
-            modifier = Modifier
-                .size(120.dp)
-                .clip(CircleShape)
-                .border(2.dp, Color.Gray, CircleShape)
-        )
-        Spacer(modifier = Modifier.height(16.dp))
-        Row(
-            horizontalArrangement = Arrangement.Center, // Susun di tengah
-            verticalAlignment = Alignment.CenterVertically
-        ) {
+            Spacer(modifier = Modifier.height(60.dp))
             Image(
-                painter = painterResource(id = R.drawable.wa),
-                contentDescription = "Google",
-                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                painter = painterResource(id = R.drawable.baskara),
+                contentDescription = "Foto Profil",
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(120.dp)
+                    .clip(CircleShape)
+                    .border(2.dp, Color.Gray, CircleShape)
             )
-            Image(
-                painter = painterResource(id = R.drawable.spotify),
-                contentDescription = "Facebook",
-                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
-            )
-            Image(
-                painter = painterResource(id = R.drawable.ig),
-                contentDescription = "Twitter",
-                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
-            )
-            Image(
-                painter = painterResource(id = R.drawable.tiktok),
-                contentDescription = "LinkedIn",
-                modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
-            )
+
+
+            Spacer(modifier = Modifier.height(16.dp))
+            Row(
+                horizontalArrangement = Arrangement.Center,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Image(
+                    painter = painterResource(id = R.drawable.wa),
+                    contentDescription = "WhatsApp",
+                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.spotify),
+                    contentDescription = "Spotify",
+                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.ig),
+                    contentDescription = "Instagram",
+                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                )
+                Image(
+                    painter = painterResource(id = R.drawable.tiktok),
+                    contentDescription = "Tiktok",
+                    modifier = Modifier.size(32.dp).padding(horizontal = 4.dp)
+                )
+            }
+
             Spacer(modifier = Modifier.height(16.dp))
             Text(
-                text = "Abra Yudhistira", // Ganti dengan namamu
+                text = "Hindia",
                 color = Color.White,
                 fontSize = 24.sp,
                 fontWeight = FontWeight.Bold
@@ -111,47 +114,65 @@ fun ProfileScreen() {
                 color = Color.White,
                 fontSize = 16.sp
             )
-        }
-        @Composable
-        fun MenuButton(text: String, icon: ImageVector) {
-            Button(
-                onClick = { /* TODO: Aksi tombol */ },
-                shape = RoundedCornerShape(50.dp), // Bikin melengkung sempurna
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = Color(0xFF3E3E3E) // Warna abu-abu tua
-                ),
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 32.dp) // Beri jarak kiri-kanan
-            ) {
-                Row(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 8.dp),
-                    verticalAlignment = Alignment.CenterVertically
-                ) {
-                    Icon(
-                        imageVector = icon,
-                        contentDescription = text,
-                        tint = Color.White,
-                        modifier = Modifier.size(20.dp)
-                    )
-                    Spacer(modifier = Modifier.width(16.dp))
-                    Text(
-                        text = text,
-                        color = Color.White,
-                        fontSize = 16.sp,
-                        modifier = Modifier.weight(1f) // Trik agar ikon titik ke dorong ke kanan
-                    )
-                    Icon(
-                        imageVector = Icons.Default.Circle, // Ikon titik
-                        contentDescription = null,
-                        tint = Color.Gray,
-                        modifier = Modifier.size(8.dp)
-                    )
-                }
-            }
-        }
 
+
+            Spacer(modifier = Modifier.height(32.dp))
+            MenuButton(
+                text = "Privacy",
+                icon = Icons.Default.Lock
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            MenuButton(
+                text = "Riwayat Transaksi",
+                icon = Icons.Default.History
+            )
+            Spacer(modifier = Modifier.height(16.dp))
+            MenuButton(
+                text = "Pengaturan",
+                icon = Icons.Default.Settings
+            )
+        }
+    }
+}
+
+
+@Composable
+fun MenuButton(text: String, icon: ImageVector) {
+    Button(
+        onClick = { /* TODO: Aksi tombol */ },
+        shape = RoundedCornerShape(50.dp), // Bikin melengkung sempurna
+        colors = ButtonDefaults.buttonColors(
+            containerColor = Color(0xFF3E3E3E) // Warna abu-abu tua
+        ),
+        modifier = Modifier
+            .fillMaxWidth()
+            .padding(horizontal = 32.dp) // Beri jarak kiri-kanan
+    ) {
+        Row(
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 8.dp),
+            verticalAlignment = Alignment.CenterVertically
+        ) {
+            Icon(
+                imageVector = icon,
+                contentDescription = text,
+                tint = Color.White,
+                modifier = Modifier.size(20.dp)
+            )
+            Spacer(modifier = Modifier.width(16.dp))
+            Text(
+                text = text,
+                color = Color.White,
+                fontSize = 16.sp,
+                modifier = Modifier.weight(1f) // Trik agar ikon titik ke dorong ke kanan
+            )
+            Icon(
+                imageVector = Icons.Default.Circle, // Ikon titik
+                contentDescription = null,
+                tint = Color.Gray,
+                modifier = Modifier.size(8.dp)
+            )
+        }
     }
 }
