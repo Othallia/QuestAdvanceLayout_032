@@ -1,6 +1,6 @@
 package com.example.questadvancelayout_032
 
-// (SEMUA IMPORT BIARKAN SAJA, SUDAH BENAR)
+// (Ini semua import yang kamu butuhkan)
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -119,18 +119,18 @@ fun ProfileScreen() {
 
             Spacer(modifier = Modifier.height(32.dp))
             MenuButton(
-                text = "Privacy",
-                icon = Icons.Default.Lock
+                text = "Matahari Di Balik",
+                imageResId = R.drawable.mdb
             )
             Spacer(modifier = Modifier.height(16.dp))
             MenuButton(
-                text = "Riwayat Transaksi",
-                icon = Icons.Default.History
+                text = "Lagipula Hidup Akan Berakhir",
+                imageResId = R.drawable.lhab
             )
             Spacer(modifier = Modifier.height(16.dp))
             MenuButton(
-                text = "Pengaturan",
-                icon = Icons.Default.Settings
+                text = "Doves",
+                imageResId = R.drawable.doves
             )
 
 
@@ -163,23 +163,26 @@ fun ProfileScreen() {
                     )
                 }
             }
-            Spacer(modifier = Modifier.height(100.dp))
+            Spacer(modifier = Modifier.height(100.dp)) // Jarak ke bawah
 
         }
+
         Text(
-            text = "© 2025 Octaviani Putri",
+            text = "© 2025 Octaviani Putri", // Ganti namamu
             color = Color.Gray,
             fontSize = 12.sp,
             modifier = Modifier
-                .align(Alignment.BottomCenter)
+                .align(Alignment.BottomCenter) // Selalu nempel di bawah
                 .padding(bottom = 24.dp)
         )
 
     }
 }
 
+
+
 @Composable
-fun MenuButton(text: String, icon: ImageVector) {
+fun MenuButton(text: String, imageResId: Int) {
     Button(
         onClick = { /* TODO: Aksi tombol */ },
         shape = RoundedCornerShape(50.dp),
@@ -196,11 +199,14 @@ fun MenuButton(text: String, icon: ImageVector) {
                 .padding(vertical = 8.dp),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Icon(
-                imageVector = icon,
+
+            Image(
+                painter = painterResource(id = imageResId),
                 contentDescription = text,
-                tint = Color.White,
-                modifier = Modifier.size(20.dp)
+                contentScale = ContentScale.Crop,
+                modifier = Modifier
+                    .size(24.dp)
+                    .clip(CircleShape)
             )
             Spacer(modifier = Modifier.width(16.dp))
             Text(
