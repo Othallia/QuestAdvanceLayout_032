@@ -95,6 +95,7 @@ fun ProfileScreen() {
                 )
             }
 
+
             Spacer(modifier = Modifier.height(16.dp))
             Text(
                 text = "Hindia",
@@ -131,22 +132,63 @@ fun ProfileScreen() {
                 text = "Pengaturan",
                 icon = Icons.Default.Settings
             )
+
+
+            Spacer(modifier = Modifier.height(32.dp))
+            Button(
+                onClick = { /* TODO: Aksi logout */ },
+                shape = RoundedCornerShape(50.dp),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = Color.Red // Warna merah
+                ),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 32.dp)
+            ) {
+                Row(
+                    modifier = Modifier.padding(vertical = 8.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.Logout,
+                        contentDescription = "Logout",
+                        tint = Color.White
+                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+                    Text(
+                        text = "Logout",
+                        color = Color.White,
+                        fontSize = 16.sp,
+                        fontWeight = FontWeight.Bold
+                    )
+                }
+            }
+            Spacer(modifier = Modifier.height(100.dp))
+
         }
+        Text(
+            text = "© 2025 Octaviani Putri",
+            color = Color.Gray,
+            fontSize = 12.sp,
+            modifier = Modifier
+                .align(Alignment.BottomCenter)
+                .padding(bottom = 24.dp)
+        )
+
     }
 }
-
 
 @Composable
 fun MenuButton(text: String, icon: ImageVector) {
     Button(
         onClick = { /* TODO: Aksi tombol */ },
-        shape = RoundedCornerShape(50.dp), // Bikin melengkung sempurna
+        shape = RoundedCornerShape(50.dp),
         colors = ButtonDefaults.buttonColors(
-            containerColor = Color(0xFF3E3E3E) // Warna abu-abu tua
+            containerColor = Color(0xFF3E3E3E)
         ),
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 32.dp) // Beri jarak kiri-kanan
+            .padding(horizontal = 32.dp)
     ) {
         Row(
             modifier = Modifier
@@ -165,10 +207,10 @@ fun MenuButton(text: String, icon: ImageVector) {
                 text = text,
                 color = Color.White,
                 fontSize = 16.sp,
-                modifier = Modifier.weight(1f) // Trik agar ikon titik ke dorong ke kanan
+                modifier = Modifier.weight(1f)
             )
             Icon(
-                imageVector = Icons.Default.Circle, // Ikon titik
+                imageVector = Icons.Default.Circle,
                 contentDescription = null,
                 tint = Color.Gray,
                 modifier = Modifier.size(8.dp)
