@@ -1,6 +1,7 @@
 package com.example.questadvancelayout_032
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
@@ -45,6 +46,12 @@ fun  ActivitasPertama(modifier: Modifier) {
                 containerColor = Color.Darkgrey
             )
         ){
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                modifier = Modifier.padding(all=10.dp)
+            ){
+
+            }
 
         }
     }
